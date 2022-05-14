@@ -53,7 +53,7 @@ const styles = {
   title: {
     color: 'heading',
     fontFamily: 'headingAlt',
-    fontWeight: 700,
+    fontWeight: 900,
     fontSize: [4, null, 5, 6],
     lineHeight: [1.33, 1.33, 2.08],
     letterSpacing: [null, null, null, 'heading'],
@@ -70,7 +70,7 @@ const styles = {
     fontSize: ['14px', null, '16px'],
     lineHeight: [1.86, null, 2.2],
     mt: [5],
-    maxWidth: 610,
+    maxWidth: 710,
     m: ['10px auto 0'],
   },
 };

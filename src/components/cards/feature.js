@@ -1,6 +1,8 @@
 /** @jsx jsx */
-import { jsx, Box, Image, Heading, Text } from 'theme-ui';
+import { jsx, Box, Image, Heading, Text, Grid } from 'theme-ui';
 import { LearnMore } from 'components/link';
+import { IoIosCheckmarkCircle } from 'react-icons/io';
+
 
 const Feature = ({ data, ...props }) => {
   return (
@@ -11,7 +13,18 @@ const Feature = ({ data, ...props }) => {
       <Box>
         <Heading as="h4">{data?.title}</Heading>
         <Text as="p">{data?.description}</Text>
-        {data?.path && <LearnMore path={data?.path} />}
+        {/* {data?.path && <LearnMore path={data?.path} />} */}
+        {data?.list && <Grid sx={styles.list} as="ul">
+          {data?.list.map((item, i) => (
+            <Text as="li" key={i}>
+              <IoIosCheckmarkCircle
+                sx={{ color: 'primary', mr: 2 }}
+                size="20px"
+              />
+              {item}
+            </Text>
+          ))}
+          </Grid>}
       </Box>
     </Box>
   );
@@ -61,6 +74,22 @@ const styles = {
     },
     a: {
       mt: [2, null, null, null, 6],
+    },
+  },
+  list: {
+    gap: '0 18px',
+    gridTemplateColumns: ['repeat(2, 142px)', null, null, 'repeat(2, 200px)'],
+    justifyContent: [null, null, null, 'center', 'unset'],
+    listStyle: 'none',
+    mt: [4, null, null, 5, 4, 5],
+    p: 0,
+    li: {
+      fontSize: [0, 1, null, 2, '15px', 2],
+      fontWeight: 500,
+      alignItems: 'center',
+      color: 'textSecondary',
+      display: 'flex',
+      lineHeight: [2.81, null, null, null, 2.2, 2.81],
     },
   },
 };

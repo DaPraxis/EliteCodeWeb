@@ -1,24 +1,24 @@
 const menuItems = [
-  {
-    path: 'home',
-    label: 'Home',
-  },
+  // {
+  //   path: 'home',
+  //   label: 'Home',
+  // },
   {
     path: 'features',
-    label: 'Feature',
+    label: 'Features',
   },
+  // {
+  //   path: 'pricing',
+  //   label: 'Pricing',
+  // },
   {
-    path: 'pricing',
-    label: 'Pricing',
+    path: 'team',
+    label: 'Team',
   },
-  {
-    path: 'support',
-    label: 'Support',
-  },
-  {
-    path: 'blog',
-    label: 'Blog',
-  },
+  // {
+  //   path: 'blog',
+  //   label: 'Blog',
+  // },
   {
     path: 'faq',
     label: 'Faq',

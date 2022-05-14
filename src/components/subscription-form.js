@@ -1,5 +1,6 @@
 /** @jsx jsx */
-import { jsx, Flex, Input, Button, Label } from 'theme-ui';
+import { jsx, Flex, Input, Button, Label} from 'theme-ui';
+import { LearnMore } from 'components/link';
 
 const SubscriptionForm = ({ buttonLabel, ...props }) => {
   return (
@@ -8,7 +9,7 @@ const SubscriptionForm = ({ buttonLabel, ...props }) => {
         Email
       </Label>
       <Input type="email" id="email" placeholder="Enter Email address" />
-      <Button>{buttonLabel ?? '联系我们'}</Button>
+      <Button as="a" href = "https://form.jotform.com/221316375057251">联系我们</Button>
     </Flex>
   );
 };
